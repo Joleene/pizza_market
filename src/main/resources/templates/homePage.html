@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Market</title>
+    <link rel="stylesheet" th:href="@{/css/fonts.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <nav id="page-nav">
+        <div class="container" id="nav-row">
+            <a th:href="@{/}" id="logo" href="">Pizza Market</a>
+            <a class="nav-item" href="">Menu</a>
+            <a class="nav-item" href="">Dostawa</a>
+            <a class="nav-item" href="">Resto</a>
+        </div>
+    </nav>
+    <section id="home-page-section">
+        <div class="container">
+            <div>
+                <img th:src="@{/img/hero-home.jpg}" alt="Pizza" style="width: 100%; height: 300px; object-fit: cover">
+            </div>
+            <div style="text-align: center">
+                <h2 style="font-size: 2em">Pizza neapolitańska</h2>
+                <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi at beatae cum cumque doloremque dolorum eaque eius eos esse eveniet ex fuga harum maxime minima nam, nemo neque nostrum nulla odio omnis perferendis possimus quam quas quasi quibusdam quo sed tempore veniam vero? Autem culpa et itaque numquam quam.</p>
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: center">
+                <a class="btn" href="">Sprawdź nasze menu</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
