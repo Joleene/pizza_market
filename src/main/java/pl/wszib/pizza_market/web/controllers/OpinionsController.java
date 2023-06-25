@@ -27,10 +27,10 @@ public OpinionsController (OpinionsService opinionsService) {
         return "opinionsPage";
     }
 
-//    @PostMapping("opinions")
-//    public String addOpinion(@ModelAttribute("name") OpinionsModel opinionsModel) {
-//        opinionsService.addOpinion(opinionsModel);
-//
-//        return "redirect:/opinions";
-//    }
+    @PostMapping("opinions")
+    public String addOpinion(@ModelAttribute("name") OpinionsModel opinionsModel) {
+        opinionsService.addOpinion(opinionsModel);
+
+        return "redirect:/opinions";
+    }
 }
