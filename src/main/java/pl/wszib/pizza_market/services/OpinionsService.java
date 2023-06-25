@@ -35,7 +35,5 @@ public class OpinionsService {
 
 }
 
-    public void addOpinion(OpinionsModel opinionsModel) {
-    }
 }
 
