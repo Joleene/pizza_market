@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.wszib.pizza_market.services.OrderService;
 import pl.wszib.pizza_market.services.PizzaService;
+import pl.wszib.pizza_market.web.models.OpinionsModel;
 import pl.wszib.pizza_market.web.models.OrderAddressModel;
 import pl.wszib.pizza_market.web.models.PizzaModel;
 
@@ -23,6 +24,7 @@ public class OrderController {
         this.orderService = orderService;
 
     }
+
     @GetMapping("order/{pizza-id}")
     public String orderForm(@PathVariable("pizza-id") Long pizzaId, Model model) {
         PizzaModel pizza = pizzaService.getById(pizzaId);
@@ -32,12 +34,14 @@ public class OrderController {
         return "orderPage";
 
     }
+
     @PostMapping("order/{pizza-id}")
     public String order(@PathVariable("pizza-id") Long pizzaId,
-                     @ModelAttribute("orderAddress") OrderAddressModel orderAddressModel) {
-            orderService.saveOrder(pizzaId, orderAddressModel);
+                        @ModelAttribute("orderAddress") OrderAddressModel orderAddressModel) {
+        orderService.saveOrder(pizzaId, orderAddressModel);
 
-            return "orderConfirmationPage";
+        return "orderConfirmationPage";
 
     }
+
 }
