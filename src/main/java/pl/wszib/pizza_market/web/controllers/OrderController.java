@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.wszib.pizza_market.services.OrderService;
 import pl.wszib.pizza_market.services.PizzaService;
-import pl.wszib.pizza_market.web.models.OpinionsModel;
 import pl.wszib.pizza_market.web.models.OrderAddressModel;
 import pl.wszib.pizza_market.web.models.PizzaModel;
 

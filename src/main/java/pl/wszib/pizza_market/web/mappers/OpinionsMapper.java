@@ -1,15 +1,17 @@
 package pl.wszib.pizza_market.web.mappers;
 
 import pl.wszib.pizza_market.data.entities.OpinionsEntity;
-import pl.wszib.pizza_market.data.entities.OrderAddressEntity;
 import pl.wszib.pizza_market.web.models.OpinionsModel;
-import pl.wszib.pizza_market.web.models.OrderAddressModel;
 
 public class OpinionsMapper {
-    public static OpinionsEntity toEntity(OpinionsModel model) {
-        OpinionsEntity entity = new OpinionsEntity();
-        entity.setName(model.getName());
-        entity.setOpinion(model.getOpinion());
+    public static OpinionsModel toModel(OpinionsEntity entity) {
+        return new OpinionsModel(entity.getId(), entity.getName(), entity.getOpinion());
+    }
+        public static OpinionsEntity toEntity(OpinionsModel model) {
+            final var entity = new OpinionsEntity();
+
+            entity.setName(model.getName());
+            entity.setOpinion(model.getOpinion());
 
 
         return entity;

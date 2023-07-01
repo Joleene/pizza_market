@@ -10,10 +10,22 @@ import jakarta.persistence.*;
     public class OpinionsEntity {
         @Id
         @GeneratedValue
+        @Column(name = "id")
+        private Long id;
         @Column(name = "name")
         private String name;
         @Column(name = "opinion")
         private String opinion;
+
+
+
+        public Long getId() {
+            return id;
+        }
+
+        public void setId(Long id) {
+            this.id = id;
+        }
 
         public String getName() {
             return name;
@@ -30,4 +42,6 @@ import jakarta.persistence.*;
         public void setOpinion(String opinion) {
             this.opinion = opinion;
         }
+
+
     }
