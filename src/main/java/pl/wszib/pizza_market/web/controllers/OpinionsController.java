@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.wszib.pizza_market.services.OpinionsService;
-import pl.wszib.pizza_market.web.models.OpinionsModel;
+import pl.wszib.pizza_market.web.models.NewOpinionModel;
 
 @Controller
 public class OpinionsController {
@@ -17,16 +17,18 @@ public OpinionsController (OpinionsService opinionsService) {
     this.opinionsService = opinionsService;
 
 }
-    @GetMapping("opinions/{opinion_id}")
+    @GetMapping("opinions")
     public String addOpinionsForm(Model model) {
     final var opinion = opinionsService.findAll();
+    model.addAttribute("opinions", new NewOpinionModel());
     model.addAttribute("opinion", opinion);
+
 
         return "opinionsPage";
     }
 
-    @PostMapping("opinions/{opinion_id}")
-    public String saveOpinion(@ModelAttribute("opinion_id") OpinionsModel opinionsModel) {
+    @PostMapping("opinions")
+    public String saveOpinion(@ModelAttribute("opinion") NewOpinionModel newOpinionModel) {
 
 
         return "redirect:/opinions";

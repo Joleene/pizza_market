@@ -12,12 +12,12 @@
             <h4 style="font-weight: 100" th:text="${opinion}"></h4>
         </div>
 
-        <form method="post">
+        <form method="post" th:object="${opinions}">
             <div>
                 <input th:field="*{name}" type="text" placeholder="Nazwa" class="input">
             </div>
             <div>
-                <input th:field="*{opinion}" type="text" placeholder="Twoja opinia..." class="input">
+                <input th:field="${opinion}" type="text" placeholder="Twoja opinia..." class="input">
             </div>
             <h3>Dodaj nową opinię</h3>
             <div>
