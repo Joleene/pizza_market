@@ -4,22 +4,22 @@
 <section id="opinions-content">
     <div class="container">
         <h2>Opinie</h2>
-
-        <div>
-            <h4 th:text="${name}"></h4>
-        </div>
-        <div>
-            <h4 style="font-weight: 100" th:text="${opinion}"></h4>
-        </div>
-
+        <h3>Dodaj nową opinię</h3>
+   <div>
+   <tr th:each="opinion : ${opinion}">
+    <td>
+        <h4 th:text="${opinion.name}"></h4>
+        <h6 th:text="${opinion.opinion}"></h6>
+    </td>
+    </tr>
+    </div>
         <form method="post" th:object="${opinions}">
             <div>
                 <input th:field="*{name}" type="text" placeholder="Nazwa" class="input">
             </div>
             <div>
-                <input th:field="${opinion}" type="text" placeholder="Twoja opinia..." class="input">
+                <input th:field="*{opinion}" type="text" placeholder="Twoja opinia..." class="input">
             </div>
-            <h3>Dodaj nową opinię</h3>
             <div>
                 <button class="btn">Dodaj</button>
             </div>

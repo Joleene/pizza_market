@@ -1,11 +1,10 @@
 package pl.wszib.pizza_market.web.mappers;
-
-import pl.wszib.pizza_market.data.entities.NewOpinionEntity;
+import pl.wszib.pizza_market.data.entities.OpinionsEntity;
 import pl.wszib.pizza_market.web.models.NewOpinionModel;
 
 public class NewOpinionMapper {
-    public static NewOpinionEntity toEntity (NewOpinionModel model) {
-        NewOpinionEntity entity = new NewOpinionEntity();
+    public static OpinionsEntity toEntity (NewOpinionModel model) {
+        OpinionsEntity entity = new OpinionsEntity();
         entity.setName(model.getName());
         entity.setOpinion(model.getOpinion());
 

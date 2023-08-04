@@ -10,16 +10,29 @@ public class OpinionsModel {
         this.name = name;
         this.opinion = opinion;
     }
-    public Long getId() {
+
+    public Long getOpinion_id() {
         return opinion_id;
     }
+
+    public void setOpinion_id(Long opinion_id) {
+        this.opinion_id = opinion_id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getOpinion() {
         return opinion;
     }
 
+    public void setOpinion(String opinion) {
+        this.opinion = opinion;
+    }
 }
 
